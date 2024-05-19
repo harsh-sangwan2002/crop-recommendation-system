@@ -1,0 +1,92 @@
+body {
+  background: url("/public/images/5.jpg") no-repeat center center/cover;
+  position: relative;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-left: 50px;
+  overflow: hidden; /* Ensure no overflow */
+}
+
+body::before {
+  content: "";
+  position: fixed; /* Change to fixed to cover entire viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1; /* Ensure it is below the content */
+}
+
+body * {
+  position: relative; /* Ensure all elements are above the overlay */
+  z-index: 10;
+}
+
+.form-container {
+  height: 90vh;
+  min-width: 400px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  opacity: 0.9;
+}
+
+.form-title {
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.crop-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-input {
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+.form-input:focus {
+  border-color: #006A4E;
+  outline: none;
+}
+
+.form-button,
+.result-container {
+  margin-top: 50px;
+  padding: 15px;
+  background-color: #006A4E;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.form-button:hover {
+  background-color: #1B4D3E;
+  transform: scale(1.05);
+}
+
+.form-button:focus {
+  outline: none;
+}
